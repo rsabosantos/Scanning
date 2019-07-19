@@ -1,2 +1,2 @@
-# Scanning script
-the purpose of this script is to scan network using batch. 
+# Basic Ping Scan
+The purpose of this script is to scan network using batch. 
