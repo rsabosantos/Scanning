@@ -1,0 +1,19 @@
+@echo off
+cls
+echo                    Ping Sweep                          
+echo.
+set /P web="Enter the First three octets of the Address  ex: 192.168.0  "
+echo.
+echo Scan Results:
+echo.
+set var1=0
+:loop
+set /a var1=%var1%+1
+if %var1% EQU 254 (
+goto :end
+) else (
+ping -n 1 %web%.%var1%  >nul  && echo %web%.%var1% ------ Host is Up  || echo %web%.%var1% -------------------- Host is down 
+goto :loop
+)
+:end
+    
